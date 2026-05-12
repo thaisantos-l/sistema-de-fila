@@ -1,0 +1,10 @@
+DirectoryIndex index.php
+RewriteEngine On
+
+# Mantém URL limpa para assets sem expor /public
+RewriteRule ^assets/(.*)$ public/assets/$1 [L,NC]
+
+# Encaminha rotas da aplicação para o front controller raiz
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
