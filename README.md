@@ -54,7 +54,7 @@ Caso precise recriar:
 2. Crie o banco `sistema-filas` com collation `utf8mb4_unicode_ci`.
 3. Rode o SQL do arquivo `database/schema.sql`.
 
-## Configuração no MAMP
+## Configuração no Servidor
 
 1. Garanta que Apache e MySQL estejam iniciados no MAMP.
 2. O projeto usa este `.env`, em caso de dúvidas, verificar o .env.example:
@@ -101,20 +101,3 @@ Caso precise recriar:
 - Transições permitidas:
   - `aguardando -> em_atendimento | cancelado`
   - `em_atendimento -> finalizado | cancelado`
-
-## Boas práticas aplicadas
-
-- MVC separado por responsabilidade
-- Serviço de domínio para regras da fila
-- PDO com prepared statements
-- Respostas JSON padronizadas
-- Validação básica de entrada
-- Sessão para autenticação do admin
-- Índices SQL para performance de consulta da fila
-
-## Próximos passos opcionais
-
-- CSRF token no login e ações do admin
-- Paginação/filtros na listagem
-- Testes automatizados (PHPUnit)
-- Docker para padronização de ambiente
